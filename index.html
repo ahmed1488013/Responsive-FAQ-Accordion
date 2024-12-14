@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HelpMe FAQ Section</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="faq-container">
+    <h2>Frequently Asked Questions</h2>
+    
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleAnswer(this)">
+        <span class="question-text">What is HelpMe?</span>
+      </div>
+      <div class="faq-answer">
+        <p>HelpMe is a support platform that helps users resolve technical issues, providing easy-to-understand solutions and helpful resources.</p>
+      </div>
+    </div>
+    
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleAnswer(this)">
+        <span class="question-text">How can I contact support?</span>
+      </div>
+      <div class="faq-answer">
+        <p>You can contact support by clicking on the "Contact Us" section on our website or by sending an email to support@helpme.com.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleAnswer(this)">
+        <span class="question-text">What are the service hours?</span>
+      </div>
+      <div class="faq-answer">
+        <p>Our support team is available 24/7 to assist you with any inquiries or issues you may have.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function toggleAnswer(question) {
+      const answer = question.nextElementSibling;
+      answer.style.maxHeight = answer.style.maxHeight ? null : answer.scrollHeight + "px";
+      question.classList.toggle('active');
+    }
+  </script>
+
+</body>
+</html>
